@@ -1,0 +1,1 @@
+/home/student/Projects/notion-ai-automation/CLAUDE.md

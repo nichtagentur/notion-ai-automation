@@ -1,0 +1,16 @@
+name: Notion AI Processor
+
+on:
+  schedule:
+    # Runs every 5 minutes (GitHub Actions minimum)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Notion AI Processor
+        run: |
+          curl -s https://notion-ai-automation.vercel.app/api/process
+          echo "Triggered at $(date)"
